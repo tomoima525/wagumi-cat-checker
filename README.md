@@ -1,14 +1,23 @@
-# Welcome to your CDK TypeScript project!
+# Wagumi Cat API
 
-This is a blank project for TypeScript development with CDK.
+- A sample project to access block-chain from serverless
+- Checks the number of Wagumi Cat https://cats.wagumi.xyz/ that are minted
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+```
+curl -X GET https://c7r5f7jqwc.execute-api.us-west-2.amazonaws.com/prod/
 
-## Useful commands
+// Total 548 is minted
+```
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+## Development
+
+```
+yarn install
+```
+
+then
+
+1.  `npx cdk bootstrap` setup your environment
+2.  `npx cdk diff` compare deployed stack with current state
+3.  `npx cdk synth` emits the synthesized CloudFormation template
+4.  `npx cdk deploy` deploy this stack to your default AWS account/region
